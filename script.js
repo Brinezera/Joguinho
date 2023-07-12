@@ -3,19 +3,15 @@ const pipe = document.querySelector('.pipe');
 const restartButton = document.querySelector('.restart-button');
 const scoreSpan = document.querySelector('.score span');
 let isGameOver = false;
-let isJumping = false; // Variável para controlar se o Mario está pulando
 let score = 0;
 
 const jump = () => {
-  if (isGameOver || isJumping) return;
-
-  isJumping = true;
-
+  if (isGameOver) return;
+  
   mario.classList.add('jump');
 
   setTimeout(() => {
     mario.classList.remove('jump');
-    isJumping = false;
   }, 500);
 };
 
@@ -57,11 +53,3 @@ document.addEventListener('keydown', (event) => {
     jump();
   }
 });
-
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Space') {
-    isJumping = false;
-  }
-});
-
-pipe.addEventListener('animationiteration', () => isGameOver && clearInterval(loop));
