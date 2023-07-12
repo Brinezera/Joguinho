@@ -51,6 +51,14 @@
   display: none;
 }
 
+.score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+
 .restart-button:hover {
   background-color: #d32f2f;
 }
