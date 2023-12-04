@@ -2,6 +2,7 @@ const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const restartButton = document.querySelector('.restart-button');
 const scoreSpan = document.querySelector('.score span');
+
 let isGameOver = false;
 let score = 0;
 
